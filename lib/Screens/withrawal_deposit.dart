@@ -22,7 +22,6 @@ class withdrawalPage extends StatelessWidget {
           )
 
 
-
         ],
       ),
     );
