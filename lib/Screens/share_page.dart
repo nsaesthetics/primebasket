@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:primebasket/Widget/animatedText.dart';
+import 'package:primebasket/Widget/animated_text.dart';
 
-class sharePage extends StatelessWidget {
-  const sharePage({Key? key}) : super(key: key);
+class SharePage extends StatelessWidget {
+  const SharePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class sharePage extends StatelessWidget {
               ],
             ),
           ),
-          buildAnimatedText(),
+          const BuildAnimatedText(),
 
           Center(child: Text("Share", style: TextStyle(fontSize: size.width*0.06, fontWeight: FontWeight.w700),),),
           Padding(
@@ -30,21 +30,21 @@ class sharePage extends StatelessWidget {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  amberSelector(size: size),
-                  amberSelector(size: size),
-                  amberSelector(size: size),
-                  amberSelector(size: size),
-                  amberSelector(size: size),
-                  amberSelector(size: size),
-                  amberSelector(size: size),
-                  amberSelector(size: size),
-                  amberSelector(size: size),
-                  amberSelector(size: size),
-                  amberSelector(size: size),
-                  amberSelector(size: size),
-                  amberSelector(size: size),
-                  amberSelector(size: size),
-                  amberSelector(size: size)
+                  AmberSelector(size: size),
+                  AmberSelector(size: size),
+                  AmberSelector(size: size),
+                  AmberSelector(size: size),
+                  AmberSelector(size: size),
+                  AmberSelector(size: size),
+                  AmberSelector(size: size),
+                  AmberSelector(size: size),
+                  AmberSelector(size: size),
+                  AmberSelector(size: size),
+                  AmberSelector(size: size),
+                  AmberSelector(size: size),
+                  AmberSelector(size: size),
+                  AmberSelector(size: size),
+                  AmberSelector(size: size)
                 ],
               ),
             ),
@@ -83,8 +83,8 @@ class sharePage extends StatelessWidget {
   }
 }
 
-class amberSelector extends StatelessWidget {
-  const amberSelector({
+class AmberSelector extends StatelessWidget {
+  const AmberSelector({
     Key? key,
     required this.size,
   }) : super(key: key);
@@ -100,7 +100,7 @@ class amberSelector extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
           border: Border.all(color: Colors.amber, width: 3)
         ),
-        child: Text('sri',style: TextStyle(color:Colors.transparent)),
+        child: const Text('sri',style: TextStyle(color:Colors.transparent)),
       ),
     );
   }

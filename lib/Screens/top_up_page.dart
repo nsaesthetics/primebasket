@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:primebasket/Widget/BottomTab.dart';
-import 'package:primebasket/Widget/animatedText.dart';
-import 'package:primebasket/Widget/appBar.dart';
+import 'package:primebasket/Widget/bottom_tab.dart';
+import 'package:primebasket/Widget/animated_text.dart';
+import 'package:primebasket/Widget/app_bar.dart';
 
-class topUpPage extends StatelessWidget {
-  const topUpPage({Key? key}) : super(key: key);
+class TopUpPage extends StatelessWidget {
+  const TopUpPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
-      bottomNavigationBar: bottomTab(),
+      bottomNavigationBar: const BottomTab(),
       body: SafeArea(
         child: ListView(
-          children: [appBar(),
-            buildAnimatedText(),
+          children: [const AppBarWidget(),
+            const BuildAnimatedText(),
 
             Padding(padding: EdgeInsets.symmetric(vertical: size.height*0.02,horizontal: size.width*0.15)
             ,
               child: MaterialButton(onPressed: (){
                 Navigator.pushNamed(context, '/topup');
               },
-                color: Color(0xff191970),
+                color: const Color(0xff191970),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5)
                 ),

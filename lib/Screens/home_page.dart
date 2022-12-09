@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:primebasket/Widget/BottomTab.dart';
-import 'package:primebasket/Widget/animatedText.dart';
-import 'package:primebasket/Widget/appBar.dart';
+import 'package:primebasket/Widget/bottom_tab.dart';
+import 'package:primebasket/Widget/animated_text.dart';
+import 'package:primebasket/Widget/app_bar.dart';
 
-class homePage extends StatelessWidget {
-  const homePage({Key? key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
-        bottomNavigationBar: bottomTab(),
+        bottomNavigationBar: const BottomTab(),
         backgroundColor: Colors.purpleAccent,
         body: ListView(
           children: [
-            appBar(),
-            buildAnimatedText(),
+            const AppBarWidget(),
+            const BuildAnimatedText(),
 
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
                 child: Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage("images/goldcard.png"),
                       fit: BoxFit.cover,
@@ -85,38 +85,38 @@ class homePage extends StatelessWidget {
 
             SizedBox(height: size.height*0.03,),
 
-            homeButtons(size: size, color: Colors.green, fontColor: Colors.white, text: "Top Up", ontap: (){
+            HomeButtons(size: size, color: Colors.green, fontColor: Colors.white, text: "Top Up", ontap: (){
               Navigator.pushNamed(context, '/topup');
             },),
-            homeButtons(size: size, color: Colors.blue, fontColor: Colors.white, text: "Withdraw", ontap: (){
+            HomeButtons(size: size, color: Colors.blue, fontColor: Colors.white, text: "Withdraw", ontap: (){
               Navigator.pushNamed(context, '/topup');
             },),
 
-            homeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "P2P Trading", ontap: (){
+            HomeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "P2P Trading", ontap: (){
               Navigator.pushNamed(context, '/p2p');
             },),
-            homeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "Share", ontap: (){
+            HomeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "Share", ontap: (){
               Navigator.pushNamed(context, '/share');
             },),
-            homeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "Order Fulfillment History", ontap: (){
+            HomeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "Order Fulfillment History", ontap: (){
               Navigator.pushNamed(context, '/orderfulfill');
             },),
-            homeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "Deposit/Withdrawal History", ontap: (){
+            HomeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "Deposit/Withdrawal History", ontap: (){
               Navigator.pushNamed(context, '/withdrawal');
             },),
-            homeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "Tier System", ontap: (){
+            HomeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "Tier System", ontap: (){
               Navigator.pushNamed(context, '/topup');
             },),
-            homeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "FAQs", ontap: (){
+            HomeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "FAQs", ontap: (){
               Navigator.pushNamed(context, '/topup');
             },),
-            homeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "Change Password", ontap: (){
+            HomeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "Change Password", ontap: (){
               Navigator.pushNamed(context, '/topup');
             },),
-            homeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "Contact Us", ontap: (){
+            HomeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "Contact Us", ontap: (){
               Navigator.pushNamed(context, '/topup');
             },),
-            homeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "Log out", ontap: (){
+            HomeButtons(size: size, color: Colors.white, fontColor: Colors.black, text: "Log out", ontap: (){
               Navigator.pushNamed(context, '/topup');
             },),
 
@@ -131,8 +131,8 @@ class homePage extends StatelessWidget {
   }
 }
 
-class homeButtons extends StatelessWidget {
-  const homeButtons({
+class HomeButtons extends StatelessWidget {
+  const HomeButtons({
     Key? key,
     required this.size,
     required this.color,
@@ -145,7 +145,7 @@ class homeButtons extends StatelessWidget {
   final Color color;
   final Color fontColor;
   final String text;
-  final ontap;
+  final Function() ontap;
 
   @override
   Widget build(BuildContext context) {

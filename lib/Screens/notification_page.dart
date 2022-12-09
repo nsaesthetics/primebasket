@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:primebasket/Widget/BottomTab.dart';
-import 'package:primebasket/Widget/animatedText.dart';
-import 'package:primebasket/Widget/appBar.dart';
+import 'package:primebasket/Widget/bottom_tab.dart';
+import 'package:primebasket/Widget/animated_text.dart';
+import 'package:primebasket/Widget/app_bar.dart';
 
-class notifPage extends StatelessWidget {
-  const notifPage({Key? key}) : super(key: key);
+class NotifPage extends StatelessWidget {
+  const NotifPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,19 +12,19 @@ class notifPage extends StatelessWidget {
     int order =220;
     final date = DateTime.now();
     return Scaffold(
-      bottomNavigationBar: bottomTab(),
+      bottomNavigationBar: const BottomTab(),
       body: SafeArea(
         child: ListView(
-          children: [appBar(),
+          children: [const AppBarWidget(),
 
-            buildAnimatedText(),
-            notification(order: order, size: size, date: date),
-            notification(order: order, size: size, date: date),
-            notification(order: order, size: size, date: date),
-            notification(order: order, size: size, date: date),
-            notification(order: order, size: size, date: date),
-            notification(order: order, size: size, date: date),
-            notification(order: order, size: size, date: date),
+            const BuildAnimatedText(),
+            Notification(order: order, size: size, date: date),
+            Notification(order: order, size: size, date: date),
+            Notification(order: order, size: size, date: date),
+            Notification(order: order, size: size, date: date),
+            Notification(order: order, size: size, date: date),
+            Notification(order: order, size: size, date: date),
+            Notification(order: order, size: size, date: date),
 
 
           ],
@@ -34,8 +34,8 @@ class notifPage extends StatelessWidget {
   }
 }
 
-class notification extends StatelessWidget {
-  const notification({
+class Notification extends StatelessWidget {
+  const Notification({
     Key? key,
     required this.order,
     required this.size,

@@ -1,27 +1,27 @@
 import 'package:currency_picker/currency_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:primebasket/Widget/BottomTab.dart';
-import 'package:primebasket/Widget/animatedText.dart';
-import 'package:primebasket/Widget/appBar.dart';
+import 'package:primebasket/Widget/bottom_tab.dart';
+import 'package:primebasket/Widget/animated_text.dart';
+import 'package:primebasket/Widget/app_bar.dart';
 
-class p2pTadingPage extends StatelessWidget {
-  const p2pTadingPage({Key? key}) : super(key: key);
+class P2pTadingPage extends StatelessWidget {
+  const P2pTadingPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return SafeArea(child: Scaffold(
-      bottomNavigationBar: bottomTab(),
+      bottomNavigationBar: const BottomTab(),
       body: ListView(
           children: [
-            appBar(),
-      buildAnimatedText(),
+            const AppBarWidget(),
+      const BuildAnimatedText(),
             SizedBox(height: size.height*0.03,),
 
             Center(
               child: Material(
                 borderRadius: BorderRadius.circular(5),
-                color: Color(0xff191970),
+                color: const Color(0xff191970),
                 child: Padding(
                   padding:EdgeInsets.symmetric(horizontal: size.width*0.02, vertical: size.height*0.01),
                   child: Text("P2P REGISTRATION", style: TextStyle(fontSize: size.width*0.055,color: Colors.white),),
@@ -37,7 +37,7 @@ class p2pTadingPage extends StatelessWidget {
                   style: TextStyle(fontSize: size.width*0.06),
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         width:3, color: Colors.green
                       ),
                       borderRadius: BorderRadius.circular(15)
@@ -63,7 +63,7 @@ class p2pTadingPage extends StatelessWidget {
                       showCurrencyName: true,
                       showCurrencyCode: true,
                       onSelect: (Currency currency) {
-                        print('Select currency: ${currency.name}');
+
                       },
                       favorite: ['SEK'],
                     );
@@ -71,7 +71,7 @@ class p2pTadingPage extends StatelessWidget {
                   style: TextStyle(fontSize: size.width*0.06),
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                             width:3, color: Colors.black
                         ),
                         borderRadius: BorderRadius.circular(15)
@@ -91,7 +91,7 @@ class p2pTadingPage extends StatelessWidget {
                 style: TextStyle(fontSize: size.width*0.06),
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                           width:3, color: Colors.green
                       ),
                       borderRadius: BorderRadius.circular(15)
@@ -105,8 +105,8 @@ class p2pTadingPage extends StatelessWidget {
             Row(
               children: [
                 SizedBox(width: size.width*0.05,),
-                Icon(Icons.add_alert_outlined,color: Color(0xff191970),size: size.width*0.07,),
-                Text("Add", style: TextStyle(fontWeight: FontWeight.bold,fontSize: size.width*0.06,color: Color(0xff191970)),)
+                Icon(Icons.add_alert_outlined,color: const Color(0xff191970),size: size.width*0.07,),
+                Text("Add", style: TextStyle(fontWeight: FontWeight.bold,fontSize: size.width*0.06,color: const Color(0xff191970)),)
               ],
             ),
             SizedBox(height:size.height*0.03),

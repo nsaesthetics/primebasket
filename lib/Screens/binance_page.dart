@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:primebasket/Widget/animatedText.dart';
-import 'package:primebasket/Widget/appBar.dart';
+import 'package:primebasket/Widget/animated_text.dart';
+import 'package:primebasket/Widget/app_bar.dart';
 
-class binancePage extends StatelessWidget {
-  const binancePage({Key? key}) : super(key: key);
+class BinancePage extends StatelessWidget {
+  const BinancePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +11,8 @@ class binancePage extends StatelessWidget {
     return SafeArea(child: Scaffold(
       body: ListView(
         children: [
-          appBar(),
-          buildAnimatedText(),
+          const AppBarWidget(),
+          const BuildAnimatedText(),
           Padding(
             padding: EdgeInsets.symmetric(vertical: size.height*0.03),
             child: Center(
@@ -45,7 +44,7 @@ class binancePage extends StatelessWidget {
 
           //Implement QR CODE SCANNER HERE.
 
-          Text("After completing your transaction, please input your transaction hash into the box:",),
+          const Text("After completing your transaction, please input your transaction hash into the box:",),
 
           Padding(
             padding: EdgeInsets.symmetric(horizontal: size.width*0.02, vertical: size.height*0.03),
@@ -55,7 +54,7 @@ class binancePage extends StatelessWidget {
                 style: TextStyle(fontSize: size.width*0.06),
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                           width:3
                       ),
                       borderRadius: BorderRadius.circular(15)

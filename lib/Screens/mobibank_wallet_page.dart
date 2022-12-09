@@ -1,10 +1,10 @@
 import 'package:currency_picker/currency_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:primebasket/Widget/animatedText.dart';
-import 'package:primebasket/Widget/appBar.dart';
+import 'package:primebasket/Widget/animated_text.dart';
+import 'package:primebasket/Widget/app_bar.dart';
 
-class mobilWallet extends StatelessWidget {
-  const mobilWallet({Key? key}) : super(key: key);
+class MobileWallet extends StatelessWidget {
+  const MobileWallet({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +14,8 @@ class mobilWallet extends StatelessWidget {
       body:
         ListView(
           children: [
-            appBar(),
-            buildAnimatedText(),
+            const AppBarWidget(),
+            const BuildAnimatedText(),
             Padding(
               padding: EdgeInsets.symmetric(vertical: size.height*0.03),
               child: Center(
@@ -34,7 +34,6 @@ class mobilWallet extends StatelessWidget {
                     showCurrencyName: true,
                     showCurrencyCode: true,
                     onSelect: (Currency currency) {
-                      print('Select currency: ${currency.name}');
                     },
                     favorite: ['SEK'],
                   );

@@ -1,8 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:marquee/marquee.dart';
 
-class buildAnimatedText extends StatelessWidget {
-  const buildAnimatedText({Key? key}) : super(key: key);
+class BuildAnimatedText extends StatelessWidget {
+  const BuildAnimatedText({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

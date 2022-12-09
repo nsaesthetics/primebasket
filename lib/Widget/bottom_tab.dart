@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-class bottomTab extends StatefulWidget {
-  const bottomTab({Key? key}) : super(key: key);
+class BottomTab extends StatefulWidget {
+  const BottomTab({Key? key}) : super(key: key);
 
   @override
-  State<bottomTab> createState() => _bottomTabState();
+  State<BottomTab> createState() => _BottomTabState();
 }
 
-class _bottomTabState extends State<bottomTab> {
+class _BottomTabState extends State<BottomTab> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-        backgroundColor: Color(0xff191960)
-        ,items: [
+        backgroundColor: const Color(0xff191960)
+        ,items: const [
       BottomNavigationBarItem(icon: Icon(Icons.add_home, color: Colors.white,), label: "Account"),
       BottomNavigationBarItem(icon: Icon(Icons.list, color: Colors.white,), label: "Account")
     ]);
